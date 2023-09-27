@@ -12,6 +12,12 @@ def morse_to_character(morse_code)
   Morse_alphabet[morse_code]
 end
 
+  #change the word
+def morse_to_worlds(morse_code)
+  characters = morse_code.split(' ')
+  characters.map { |char| Morse_alphabet[char] }.join('')
+end
+
     #change to words
 def morse_to_sentences(morse_code)
     words = morse_code.split('  ')
