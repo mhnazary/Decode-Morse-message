@@ -12,17 +12,17 @@ def morse_to_character(morse_code)
 end
 
 def morse_to_worlds(morse_code)
-  characters = morse_code.split()
-  characters.map { |char| MORSE_ALPHABET[char] }.join()
+  characters = morse_code.split('')
+  characters.map { |char| MORSE_ALPHABET[char] }.join('')
 end
 
 def morse_to_sentences(morse_code)
   words = morse_code.split('  ')
     result = words.map do |word|
-      characters = word.split()
-      characters.map { |char| MORSE_ALPHABET[char] }.join()
+      characters = word.split('')
+      characters.map { |char| MORSE_ALPHABET[char] }.join('')
     end
-    result.join(' ')
+  result.join(' ')
 end
 
 message = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
